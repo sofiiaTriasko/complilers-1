@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05766ea5-2aae-4a87-9965-cab66fa286e8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2gdKdvEwdwaHT1XW1jKSS6Bl0pS" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/maksymkhodakov/IdeaProjects/lab1/dragon-tiger&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/driver" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05766ea5-2aae-4a87-9965-cab66fa286e8" name="Changes" comment="" />
+      <created>1716022104780</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716022104780</updated>
+      <workItem from="1716022105692" duration="1401000" />
+      <workItem from="1716023847940" duration="2039000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
+    <option name="historyDtoById">
+      <map>
+        <entry key="fdf6bb">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="fdf6bb" />
+              <option name="initiateTms" value="1716024283588" />
+              <option name="request" value=" How to fix the following error:&#10;&lt;expression&gt; expected, got 'end'" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="Welcome to Machinet AI! To get the best assistance, please [sign in](https://www.machinet.net/#signin) and [subscribe](https://www.machinet.net/#pricing) to Machinet AI.&#10;&#10;To sign in:&#10;1. Press 'Sign In' button at the left corner of the chat inside IDE.&#10;2. You will then be automatically redirected to https://machinet.net website, where you will be prompted to sign in. The login form contains inputs for email and password.&#10;&#10;To subscribe:&#10;1. Please choose a Pro or Max subscription at our [website](https://www.machinet.net/#pricing).&#10;2. You can also use a Pro Trial subscription to test Machinet AI for 10 days.&#10;&#10;Once you are signed in and subscribed, I'll be happy to assist you further!" />
+              <option name="responseFileName" value="" />
+              <option name="responseFilePath" value="" />
+              <option name="responseTms" value="1716024286790" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/read_unsigned.tig" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="greeting">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="greeting" />
+              <option name="initiateTms" value="1716024281394" />
+              <option name="request" value="" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="&#10;Hello, I am Machinet AI - context aware chat, which can help you with your daily programming routine. How can I help?" />
+              <option name="responseTms" value="1716024283110" />
+            </ChatHistoryModel>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

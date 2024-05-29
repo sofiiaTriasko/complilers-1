@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinized DFA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function copyToClipboard(elementId) {
+            var copyText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(copyText).then(function() {
+                alert("Copied to clipboard");
+            }, function(err) {
+                alert("Error in copying text: ", err);
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <button onclick="copyToClipboard('determinized-dfa')">Copy</button>
+    <pre id="determinized-dfa">
+### Language Accepted by the Automaton
+
+The automaton accepts the following language over the alphabet \(\Sigma = \{x, y, z\}\):
+
+1. Any string that reaches state 7, including through \(\epsilon\)-transitions:
+   - \(\epsilon\)
+   - \(x\)
+   - \(z\)
+   - \(y\)
+   - \(xy\)
+   - \(xz\)
+   - \(yz\)
+   - And so on...
+
+### Non-deterministic Automaton
+
+The given automaton is non-deterministic due to the following reasons:
+
+1. **\(\epsilon\)-transitions**:
+   - There are multiple \(\epsilon\)-transitions from state 1 to state 2, from state 2 to state 3, from state 3 to state 4, from state 2 to state 5, from state 5 to state 6, and from state 6 to state 7.
+
+2. **Multiple transitions for the same input**:
+   - From state 1, there are transitions on `x` to state 5, on `z` to state 5, and an \(\epsilon\)-transition to state 2.
+
+### Determinizing the Automaton
+
+To determinize the automaton, we will use the subset construction method. This method involves creating states in the DFA that represent sets of states in the NFA.
+
+1. **Start State**: \(\{1, 2, 3, 4\}\)
+2. **Input Symbols**: \( \Sigma = \{x, y, z\} \)
+3. **New States and Transitions**:
+
+   - **State \(\{1, 2, 3, 4\}\)**:
+     - On `x`: Move to \(\{5, 6, 7\}\)
+     - On `y`: Move to \(\{6, 7\}\)
+     - On `z`: Move to \(\{6, 7\}\)
+
+   - **State \(\{5, 6, 7\}\)**:
+     - On `x`: Move to \(\emptyset\) (no further transitions)
+     - On `y`: Move to \(\{6, 7\}\)
+     - On `z`: Move to \(\{6, 7\}\)
+
+   - **State \(\{6, 7\}\)**:
+     - On `x`: Move to \(\emptyset\) (no further transitions)
+     - On `y`: Move to \(\emptyset\) (no further transitions)
+     - On `z`: Move to \(\emptyset\) (no further transitions)
+
+   - **State \(\emptyset\)**:
+     - On any input: Remain in \(\emptyset\)
+
+### DFA Transition Table
+
+Here is the DFA transition table:
+
+| State      | On `x`      | On `y`    | On `z`    |
+|------------|-------------|-----------|-----------|
+| {1, 2, 3, 4} | {5, 6, 7}   | {6, 7}    | {6, 7}    |
+| {5, 6, 7}   | ∅           | {6, 7}    | {6, 7}    |
+| {6, 7}      | ∅           | ∅         | ∅         |
+| ∅           | ∅           | ∅         | ∅         |
+
+### DFA State Diagram
+
+The DFA can be represented as:
+
+- Start state: \(\{1, 2, 3, 4\}\)
+- Accept states: \(\{5, 6, 7\}\), \(\{6, 7\}\)
+- Transitions:
+  - \(\{1, 2, 3, 4\}\) --x--> \(\{5, 6, 7\}\)
+  - \(\{1, 2, 3, 4\}\) --y--> \(\{6, 7\}\)
+  - \(\{1, 2, 3, 4\}\) --z--> \(\{6, 7\}\)
+  - \(\{5, 6, 7\}\) --y--> \(\{6, 7\}\)
+  - \(\{5, 6, 7\}\) --z--> \(\{6, 7\}\)
+  - \(\{6, 7\}\) --x, y, z--> ∅
+  - ∅ --x, y, z-->
